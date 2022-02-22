@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Network Name="Network0" Revision="0.0">
+	<!-- List of Components in this network -->
+	<Components>
+		<Object
+			Name       = "ConveyorBelt1"
+			GUID       = "{420AB105-F9CA-406E-84D9-8E29769C1B31}"
+			Class      = "ConveyorBelt"
+			Position   = "(960,270)"
+			Visualized = "false"
+			CyclicTime = "10 ms">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Server Name="ConveyorbeltSteps" Value="ConveyorBelt::Step01"/>
+				<Server Name="TimeDelay" Value="5000"/>
+				<Client Name="Cylinder"/>
+				<Client Name="Lichtschrank"/>
+				<Client Name="Motor" Value="0"/>
+				<Client Name="Start"/>
+			</Channels>
+		</Object>
+		<Object
+			Name       = "ConveyorBelt2"
+			GUID       = "{7570F032-1EE0-405B-B5DC-AF0D502EE30F}"
+			Class      = "ConveyorBelt"
+			Position   = "(960,600)"
+			Visualized = "false"
+			CyclicTime = "10 ms">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Server Name="ConveyorbeltSteps" Value="Step01"/>
+				<Server Name="TimeDelay" Value="5000"/>
+				<Client Name="Cylinder"/>
+				<Client Name="Lichtschrank"/>
+				<Client Name="Motor"/>
+				<Client Name="Start"/>
+			</Channels>
+		</Object>
+	</Components>
+	<Comments>
+	</Comments>
+	<!-- List of Connections in this network -->
+	<Connections>
+		<Connection Source="ConveyorBelt1.Motor" Destination="__IO_Element1" Vertices="(960,360),(496,360)," IOObject="Motor01"/>
+		<Connection Source="ConveyorBelt1.Lichtschrank" Destination="__IO_Element01" Vertices="(960,420),(496,420)," IOObject="LichtSch01"/>
+		<Connection Source="ConveyorBelt1.Start" Destination="__IO_Element11" Vertices="(960,480),(496,480)," IOObject="Start01"/>
+		<Connection Source="ConveyorBelt1.Cylinder" Destination="__IO_Element21" Vertices="(960,540),(496,540)," IOObject="Zylinder01"/>
+		<Connection Source="ConveyorBelt2.Motor" Destination="__IO_Element3" Vertices="(960,690),(496,690)," IOObject="Motor2"/>
+		<Connection Source="ConveyorBelt2.Lichtschrank" Destination="__IO_Element2" Vertices="(960,750),(496,750)," IOObject="LichtSch02"/>
+		<Connection Source="ConveyorBelt2.Start" Destination="__IO_Element01" Vertices="(960,810),(496,420)," IOObject="LichtSch01"/>
+		<Connection Source="ConveyorBelt2.Cylinder" Destination="__IO_Element4" Vertices="(960,870),(496,870)," IOObject="Zylinder02"/>
+	</Connections>
+	<!-- List of temp data objects in this network -->
+	<IOObjects>
+		<IOObject KeyName="__IO_Element01" Name="LichtSch01" Position="(180,390)" Client="ConveyorBelt1.Lichtschrank"/>
+		<IOObject KeyName="__IO_Element1" Name="Motor01" Position="(180,330)" Client="ConveyorBelt1.Motor"/>
+		<IOObject KeyName="__IO_Element11" Name="Start01" Position="(180,450)" Client="ConveyorBelt1.Start"/>
+		<IOObject KeyName="__IO_Element2" Name="LichtSch02" Position="(180,720)" Client="ConveyorBelt2.Lichtschrank"/>
+		<IOObject KeyName="__IO_Element21" Name="Zylinder01" Position="(180,510)" Client="ConveyorBelt1.Cylinder"/>
+		<IOObject KeyName="__IO_Element3" Name="Motor2" Position="(180,660)" Client="ConveyorBelt2.Motor"/>
+		<IOObject KeyName="__IO_Element4" Name="Zylinder02" Position="(180,840)" Client="ConveyorBelt2.Cylinder"/>
+	</IOObjects>
+	<!-- Headerfiles -->
+	<Options>
+	</Options>
+</Network>

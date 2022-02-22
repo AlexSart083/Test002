@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<IOConnectionManager Version="0" Detail="0" PLC="">
+	<!-- List of Entries -->
+	<Entry Name="**IOCONN_EMPTY**" Objectsize="284">
+		<!-- List of Connections -->
+		<IOConnections>
+		</IOConnections>
+	</Entry>
+	<Entry Name="LichtSch01" Objectsize="300" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="DM1611" Server="Input2" ObjClt="ConveyorBelt1" Client="Lichtschrank" IOI="Input" Type="Digital" SortIndex="1" KeyName="000001"/>
+			<IOConnection ObjSrv="DM1611" Server="Input2" ObjClt="ConveyorBelt2" Client="Start" IOI="Input" Type="Digital" SortIndex="8" KeyName="000009"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="LichtSch02" Objectsize="300" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="DM1611" Server="Input3" ObjClt="ConveyorBelt2" Client="Lichtschrank" IOI="Input" Type="Digital" SortIndex="5" KeyName="000006"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="Motor01" Objectsize="300" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="DM1611" Server="Output1" ObjClt="ConveyorBelt1" Client="Motor" IOI="Output" Type="Digital" SortIndex="0" KeyName="000000"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="Motor2" Objectsize="300" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="DM1611" Server="Output3" ObjClt="ConveyorBelt2" Client="Motor" IOI="Output" Type="Digital" SortIndex="7" KeyName="000008"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="Start01" Objectsize="300" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="DM1611" Server="Input1" ObjClt="ConveyorBelt1" Client="Start" IOI="Input" Type="Digital" SortIndex="2" KeyName="000002"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="Zylinder01" Objectsize="300" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="DM1611" Server="Output2" ObjClt="ConveyorBelt1" Client="Cylinder" IOI="Output" Type="Digital" SortIndex="3" KeyName="000003"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="Zylinder02" Objectsize="300" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="DM1611" Server="Output4" ObjClt="ConveyorBelt2" Client="Cylinder" IOI="Output" Type="Digital" SortIndex="9" KeyName="000010"/>
+		</IOConnections>
+	</Entry>
+	<!-- List of Folders -->
+</IOConnectionManager>

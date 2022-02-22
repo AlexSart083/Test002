@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<WatchVariable>
+	<Variable Name="ConveyorBelt1" Expand="1">
+		<ChildVar Name="ClassSvr"/>
+		<ChildVar Name="TimeDelay"/>
+		<ChildVar Name="ConveyorbeltSteps"/>
+		<ChildVar Name="Motor" SetValue="0"/>
+		<ChildVar Name="Lichtschrank"/>
+		<ChildVar Name="Start"/>
+		<ChildVar Name="Cylinder"/>
+		<ChildVar Name="TimeMark" SetValue="123"/>
+	</Variable>
+	<Variable Name="ConveyorBelt1.TimeMark"/>
+	<Variable Name="ConveyorBelt2.Motor"/>
+</WatchVariable>
