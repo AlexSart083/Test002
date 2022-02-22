@@ -5,7 +5,7 @@
 (*!
 <Class
 	Name               = "ConveyorBelt"
-	Revision           = "0.0"
+	Revision           = "1.0"
 	GUID               = "{3832E229-4C5E-4A07-8C8F-F8A4BB6663E7}"
 	RealtimeTask       = "false"
 	CyclicTask         = "true"
@@ -73,7 +73,7 @@ END_CLASS;
 FUNCTION GLOBAL TAB ConveyorBelt::@CT_
 0$UINT,
 2#0100000000000010$UINT, //TY_CONVEYORBELT
-0$UINT, 0$UINT, (SIZEOF(::ConveyorBelt))$UINT, 
+1$UINT, 0$UINT, (SIZEOF(::ConveyorBelt))$UINT, 
 3$UINT, 4$UINT, 0$UINT, 
 TO_UDINT(3838332719), "ConveyorBelt", //Class
 TO_UDINT(0), 0, 0$UINT, 0$UINT, //Baseclass
@@ -214,6 +214,11 @@ FUNCTION VIRTUAL GLOBAL ConveyorBelt::CyWork
           ConveyorbeltSteps := Step04;
           
         end_if;    
+        
+        IF Lichtschrank and Lichtschrank = 0 THEN
+        
+          Lichtschrank := 0;
+        END_IF;
 
 
 //*************Step 04******************\\    

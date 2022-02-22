@@ -2,7 +2,7 @@
 <OpenViews>
 	<View Key="Network0" Type="0"/>
 	<View Key="Graphical Hardware Editor" Type="17"/>
-	<View Key="ConveyorBelt" Type="2" LineNr="73"/>
-	<View Key="Network0" Type="0"/>
+	<View Key="ConveyorBelt" Type="2" LineNr="83"/>
+	<View Key="ConveyorBelt" Type="2" LineNr="83"/>
 	<Setting Variable="OutputDebugger" Value="2"/>
 </OpenViews>
